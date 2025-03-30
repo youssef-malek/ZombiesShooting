@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider capsuleCollider;
     void Start()
     {
-        
+
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
