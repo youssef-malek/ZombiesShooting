@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     private int hitNumber = 0;
-    void OnCillisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
 
         if (other.transform.CompareTag("bullet"))
