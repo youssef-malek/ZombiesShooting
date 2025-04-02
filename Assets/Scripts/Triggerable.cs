@@ -4,13 +4,14 @@ using UnityEngine;
 
 
 
-public enum TriggetAction{
-    Activated,
-    Deactivated,
+public enum TriggerAction
+{
+    Activate,
+    Deactivate,
     Toggle,
 }
 public abstract class Triggerable : MonoBehaviour
 {
-   public abstract void Trigger(TriggetAction action); 
-    
+    public abstract void Trigger(TriggerAction action);
+
 }
