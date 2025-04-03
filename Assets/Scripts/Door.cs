@@ -5,8 +5,11 @@ using UnityEngine;
 public class Door : Triggerable
 {
 
+    
     public override void Trigger(TriggerAction action)
     {
 
     }
+
+    
 }

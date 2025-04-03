@@ -7,7 +7,7 @@ public class TargetActivator : Triggerable
     public bool deactivatedOnAwake = true;
 
 
-    void OnAwake()
+    void Awake()
     {
         if (deactivatedOnAwake)
         {
