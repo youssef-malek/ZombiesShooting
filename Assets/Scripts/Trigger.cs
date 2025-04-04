@@ -20,7 +20,7 @@ public class Trigger : MonoBehaviour
         }
     }
 
-    void TriggerTargets()
+    public void TriggerTargets()
     {
 
         foreach (Triggerable t in targets)
@@ -29,6 +29,21 @@ public class Trigger : MonoBehaviour
             {
 
                 t.Trigger(action);
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawCube(transform.position, Vector3.one * 0.25f);
+
+        if (targets != null)
+        {
+            foreach (Triggerable t in targets)
+            {
+
             }
         }
     }
