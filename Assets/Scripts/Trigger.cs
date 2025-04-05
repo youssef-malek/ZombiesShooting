@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
@@ -43,8 +44,22 @@ public class Trigger : MonoBehaviour
         {
             foreach (Triggerable t in targets)
             {
-
+                if (t != null)
+                {
+                    Gizmos.DrawLine(transform.position, t.transform.position);
+                }
             }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.matrix = transform.worldToLocalMatrix;
+        MeshFilter mf = GetComponent<MeshFilter>();
+
+        if (mf != null)
+        {
+            Gizmos.DrawWireMesh(mf.sharedMesh, transform.position);
         }
     }
 }
